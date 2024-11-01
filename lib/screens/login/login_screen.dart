@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/screens/otp/otp_screen.dart';
 import 'package:whatsapp/widgets/uihelper.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -117,6 +118,13 @@ class _LoginScreenState extends State<LoginScreen> {
         content: Text("Enter Phone Number"),
         backgroundColor: Color(0XFF00A884),
       ));
-    } else {}
+    } else {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => OtpScreen(
+                    phonenumber: phonenumber,
+                  )));
+    }
   }
 }
