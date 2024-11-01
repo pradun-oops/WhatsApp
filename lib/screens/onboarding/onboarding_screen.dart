@@ -54,8 +54,8 @@ class OnboardingScreen extends StatelessWidget {
       ),
       floatingActionButton: Uihelper.CustomButton(
         callback: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => LoginScreen()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const LoginScreen()));
         },
         buttonname: "Agree and continue",
       ),
