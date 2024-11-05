@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: 10,
               ),
               SizedBox(
-                width: 250,
+                width: 225,
                 child: TextField(
                   keyboardType: TextInputType.number,
                   controller: phoneController,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/screens/profile/profile_screen.dart';
 import 'package:whatsapp/widgets/uihelper.dart';
 
 // ignore: must_be_immutable
@@ -33,7 +34,7 @@ class OtpScreen extends StatelessWidget {
               height: 30,
             ),
             Uihelper.CustomText(
-              text: "You've tried to register +91${phonenumber}",
+              text: "You've tried to register +91$phonenumber",
               height: 15,
             ),
             Uihelper.CustomText(
@@ -101,8 +102,12 @@ class OtpScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton:
-          Uihelper.CustomButton(callback: () {}, buttonname: 'Next'),
+      floatingActionButton: Uihelper.CustomButton(
+          callback: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()));
+          },
+          buttonname: 'Next'),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
